@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="Hobbies" onsubmit="return validateForm()">
+        Gender:
+        Male: <input type="radio" name="gender" id="male">
+        Female: <input type="radio" name="gender" id="female"><br>
+        Hobbies:
+        <select name="hobbies" id="hobbies">
+            <option disabled selected value="">Select</option>
+            <option value="Playing">Playing</option>
+            <option value="Reading">Reading</option>
+            <option value="Writing">Writing</option>
+            <option value="Singing">Singing</option>
+        </select>
+        <button value="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm(){
+            var gender = document.querySelector('input[name=gender]:checked');
+            var hobbies = document.Hobbies.hobbies.value;
+
+            if(!gender){
+                alert("Please check gender");
+                return false;
+            }
+
+            if(hobbies===""){
+                alert("Please select hobbies.");
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

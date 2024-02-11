@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="regdform" onsubmit="formValidate()">
+        Username:<input type="text" name="username" id="username" required>
+        <br>
+        Email:<input type="text" name="email" id="email" required>
+        <br>
+        <input type="submit" value="register">
+    </form>
+    <script>
+    function formValidate(){
+        var valid = false;
+        var username = document.regdform.username.value;
+        var username_reg = new RegExp("^[A-Z][a-z]{6,}$");
+    
+        var email = document.regdform.email.value;
+        var email_reg = new RegExp("^[a-zA-Z0-9]+@[a-zA-z0-9]+\\.[a-zA-z]{3,}$")
+        
+        if(username_reg.test(username)){
+            valid = true;
+        }
+        else{
+            window.alert("hello mister enter correctly")
+        }
+    
+        if(email_reg.test(email)){
+            valid= true;
+        }
+        else{
+            window.alert("HEroooooooo");
+        }
+        return valid;
+    }
+</script>
+</body>
+</html>

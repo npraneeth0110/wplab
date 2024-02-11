@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Picker</title>
+</head>
+<body>
+<form>
+    <label for="background">Background Color:</label>
+    <input type="color" id="background" name="background"><br>
+
+    <label for="foreground">Foreground Color:</label>
+    <input type="color" id="foreground" name="foreground"><br>
+
+    <button type="button" onclick="setColor()">Set Colors</button>
+</form>
+
+<script>
+function setColor() {
+    var backgroundColor = document.getElementById('background').value;
+    var foregroundColor = document.getElementById('foreground').value;
+
+    document.body.style.backgroundColor = backgroundColor;
+    document.body.style.color = foregroundColor;
+}
+</script>
+</body>
+</html>

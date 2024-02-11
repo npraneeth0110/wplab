@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="regdform">
+        Username: <input type="text" name="username" id="username">
+        Email: <input type="text" name="email" id="email">
+        Mobile: <input type="text" name="mobile" id="mobile">
+        <button onclick="DisplayDetails()">Display Details</button>
+    </form>
+    <script>
+        function DisplayDetails(){
+
+        
+        var username = document.regdform.username.value;
+        var email = document.regdform.email.value;
+        var mobile = document.regdform.mobile.value;
+
+        var userDetails = "Username : "+ username +"\n"+
+                          "Email : "+ email+"\n"+
+                          "Mobile : "+ mobile;
+        
+        alert(userDetails);
+        }
+    </script>
+</body>
+</html>

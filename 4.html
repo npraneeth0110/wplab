@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="regdform" onsubmit="formValidate()">
+        Mobile:<input type="text" name="mobile" id="mobile" required>
+        <br>
+        Email:<input type="text" name="email" id="email" required>
+        <br>
+        <input type="submit" value="register">
+    </form>
+    <script>
+    function formValidate(){
+        var valid = false;
+
+        var mobile = document.regdform.mobile.value;
+        var mobile_reg = new RegExp("^[9]\\d{9}$")
+    
+        var email = document.regdform.email.value;
+        var email_reg = new RegExp("^[a-zA-Z0-9]+@[a-zA-z0-9]+\\.[a-zA-z]{3,}$")
+
+        if(mobile_reg.test(mobile)){
+            valid = true;
+        }
+        else{
+            window.alert("Enter mobile no starting with number 0 and of digits 10")
+        }
+    
+        if(email_reg.test(email)){
+            valid= true;
+        }
+        else{
+            window.alert("HEroooooooo");
+        }
+        return valid;
+    }
+</script>
+</body>
+</html>

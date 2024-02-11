@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+    Red: <input type="radio" name="color" id="red" value="red">
+    Blue: <input type="radio" name="color" id="blue" value="blue">
+    Green: <input type="radio" name="color" id="green" value="green"><br>
+    <button type="button" onclick="changeColor()">Change backgroundColor</button>
+    </form>
+</body>
+
+<script>
+    function changeColor(){
+        var bgcolor = document.querySelector("input[name=color]:checked").value;
+        document.body.style.backgroundColor = bgcolor;
+    }
+</script>
+
+</html>
